@@ -1,0 +1,20 @@
+public int[] selectionSort(int[] array){
+  if(array.length == null){
+    return;
+  } else {
+      int min = array[0];
+      int index = 0;
+      for(int i=0; i<array.length; i++){
+        for(int n=i; n<array.length; n++){
+          if(min > array[n]){
+            min = array[n];
+            index = n;
+          }
+        }
+        int temp = array[index];
+        array[i] = min;
+        array[index] = temp;
+      }
+    }
+  return array;
+}
