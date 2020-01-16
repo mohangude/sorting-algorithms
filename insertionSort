@@ -1,0 +1,15 @@
+public int[] insertionSort(int[] array){
+  for(int i=0; i<array.length; i++){
+    int min = array[i];
+    int location = i;
+    for(int n=0; n<i; n++){
+      if(array[n] < min){
+        int temp = min;
+        array[location] = array[n];
+        array[n] = temp;
+        location = i;
+      }
+    }
+  }
+  return array;
+}
